@@ -1,0 +1,675 @@
+@import 'normalize';
+@import 'reset';
+@import 'fonts';
+$width: 1920px;
+$font-f: 'Roboto';
+@mixin title-section {
+    font-family: $font-f;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 67px;
+    color: #ffffff;
+}
+
+@mixin txt-section {
+    font-family: $font-f;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+@mixin txt-week-section-5 {
+    font-family: $font-f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+@mixin number-week-section-5 {
+    font-family: $font-f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: right;
+    color: #ffffff;
+}
+
+@mixin name-teacher-section-6 {
+    font-family: $font-f;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    color: #ffffff;
+}
+
+@mixin position-teacher-section-6 {
+    font-family: $font-f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #ffffff;
+}
+
+a:active,
+a:focus {
+    outline: none;
+}
+
+* {
+    transition: all 0.8s;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    max-width: $width;
+    background-color: #000000;
+}
+
+.header {
+    background-image: url(../img/bcg-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 960px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0 0 0;
+}
+
+.logo {
+    margin: 0 0 0 80px;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    li {
+        margin: 0 56px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.menu-list-item {
+    font-family: $font-f;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 150%;
+    color: #ffffff;
+    &:hover {
+        color: #684242;
+    }
+}
+
+.btn-lk {
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50px;
+    margin: 0 80px 0 0;
+    padding: 10px 30px;
+    &:hover {
+        background: #7C6AFA;
+    }
+    &:hover span {
+        color: rgb(255, 255, 255);
+    }
+    span {
+        font-family: $font-f;
+        font-size: 16px;
+        line-height: 24px;
+        line-height: 150%;
+        color: #ffffff;
+    }
+}
+
+.title-header {
+    font-family: $font-f;
+    font-size: 64px;
+    line-height: 90px;
+    line-height: 140%;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 270px 0 50px 312px;
+}
+
+.time-curs {
+    display: flex;
+    margin: 50px 0 0 312px;
+}
+
+.block-time {
+    margin: 0 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #121212;
+    padding: 20px;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.number-block-time {
+    font-family: $font-f;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 51px;
+    color: #ffffff;
+}
+
+.world-number-block-time {
+    font-family: $font-f;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #ffffff;
+}
+
+.footer-header {
+    background: #121212;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.btn-buy-coursers {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    border-radius: 50px;
+    width: 109px;
+    height: 26px;
+    padding: 10px 20px;
+    margin: 0 0 0 312px;
+    span {
+        font-family: $font-f;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.text-footer-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 400px 714px;
+    grid-template-rows: 40px 40px;
+    padding: 0 0 0 111px;
+}
+
+.block-of-text {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.numbers-texts-footer-header {
+    font-family: $font-f;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.texts-footer-header {
+    font-family: $font-f;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.progressbar {
+    height: 4px;
+    position: relative;
+    width: 714px;
+    background: #ffffff;
+    span {
+        width: 60%;
+    }
+}
+
+.progressbar>span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    position: relative;
+    overflow: hidden;
+}
+
+.numbers-progress-bar {
+    display: flex;
+    span {
+        font-family: $font-f;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+}
+
+.section-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 200px 0 274px 312px;
+}
+
+.img-section-1 {
+    width: 526px;
+    height: 499px;
+    border: 30px solid;
+    border-image: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-image-slice: 1;
+    display: flex;
+    z-index: 2;
+    position: relative;
+}
+
+.image-section-1 {
+    z-index: 3;
+    position: absolute;
+    top: 106px;
+    left: 40px;
+}
+
+.text-section-1 {
+    max-width: 636px;
+    margin: 100px 0 0 134px;
+}
+
+.title-section-1 {
+    @include title-section;
+}
+
+.txt-section-1 {
+    padding: 45px 0 0 0;
+    @include txt-section;
+}
+
+.section-2 {
+    margin: 0 0 200px 312px;
+}
+
+.index-section-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 457px;
+}
+
+.title-section-2 {
+    @include title-section;
+    padding: 0 0 0 20px;
+}
+
+.txt-section-2 {
+    @include txt-section;
+    padding: 49px 0 0 0;
+}
+
+.charts-section-2 {
+    margin: 80px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.block-charts-section-2 {
+    width: 324px;
+}
+
+.title-block {
+    font-family: $font-f;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 51px;
+    color: #ffffff;
+}
+
+.chart-block {
+    width: 324px;
+    height: 80px;
+    margin: 20px 0 35px 0;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.chart-block-2 {
+    height: 60px;
+    margin: 30px 0 45px 0;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.chart-block-3 {
+    height: 30px;
+    margin: 45px 0 60px 0;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.chart-block-4 {
+    height: 10px;
+    margin: 55px 0 70px 0;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.txt-block {
+    font-family: $font-f;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
+}
+
+.blocks-section-3 {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0 231px 0;
+    flex-wrap: wrap;
+}
+
+.block-section-3 {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 82px 0 0;
+    &:nth-child(3) {
+        margin: 0;
+    }
+}
+
+.title-section-3 {
+    @include title-section();
+    text-align: center;
+}
+
+.title-block-section-3 {
+    font-feature-settings: $font-f;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #ffffff;
+    text-align: center;
+    margin: 66px 0 30px 0
+}
+
+.txt-block-section-3 {
+    @include txt-section();
+    text-align: center;
+}
+
+.section-4 {
+    margin: 0 0 272px 293px;
+}
+
+.block-section-4 {
+    display: flex;
+    align-items: center
+}
+
+.title-section-4 {
+    @include title-section();
+    margin: 0 0 0 52px;
+}
+
+.partners-section-4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0 0 50px;
+}
+
+.partner-section-4 {
+    border: 1px solid #ffffff;
+    border-top: none;
+    border-left: none;
+    width: 320px;
+    &:nth-child(n+5) {
+        border-bottom: none;
+    }
+    &:nth-child(4) {
+        border-right: none;
+    }
+    &:nth-child(8) {
+        border-right: none;
+    }
+}
+
+.img-partner-section-4 {
+    padding: 29px 66px;
+}
+
+.section-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 231px 0;
+}
+
+.title-section-5 {
+    @include title-section();
+    margin: 77px 0 0 60px;
+}
+
+.txt-title-section-5 {
+    @include txt-section();
+    text-align: center;
+    margin: 30px 0 0 40px;
+}
+
+.weeks-section-5 {
+    border-right: 6px solid;
+    border-image: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-image-slice: 1;
+    padding: 0 60px 0 0;
+    margin: 80px 216px 0 0;
+}
+
+.week-section-5 {
+    width: 240px;
+    padding: 10px 0 0 0;
+    position: relative;
+    &:nth-child(2n) {
+        left: 306px;
+    }
+    &:nth-child(2n+1) .txt-week-section-5 {
+        &::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 40px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 20px;
+            right: -60px;
+        }
+    }
+    &:nth-child(2n) .txt-week-section-5 {
+        &::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 40px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 20px;
+        }
+    }
+}
+
+.number-week-section-5 {
+    @include number-week-section-5();
+}
+
+.txt-week-section-5 {
+    @include txt-week-section-5();
+    text-align: right;
+    padding: 15px 0 0 0;
+    position: relative;
+}
+
+.section-6 {
+    margin: 0 0 200px 0;
+}
+
+.logo-section-6 {
+    display: flex;
+    margin: 0 0 0 312px;
+    height: 80px;
+}
+
+.title-section-6 {
+    @include title-section();
+    margin: 0 0 0 39px;
+    align-self: flex-end;
+}
+
+.ours-teachers {
+    margin: 113px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-section-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(1) {
+        margin: 0 250px 0 0;
+    }
+    &:nth-child(3) {
+        margin: 0 0 0 250px;
+    }
+}
+
+.name-teacher-section-6 {
+    @include name-teacher-section-6();
+    padding: 40px 0 15px 0;
+}
+
+.position-teacher-section-6 {
+    @include position-teacher-section-6();
+    padding: 0 0 40px 0;
+}
+
+.bio-teacher-section-6 {
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    width: 143px;
+    text-align: center;
+    @include txt-section();
+    &:hover {
+        background-color: rgb(199, 221, 190);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 30px 0;
+}
+
+.title-footer {
+    @include title-section();
+    text-align: center;
+}
+
+.txt-footer {
+    @include txt-section();
+    text-align: center;
+    margin: 30px 0 60px 0;
+}
+
+.email-search-footer {
+    width: 492px;
+    height: 44px;
+    display: flex;
+    position: relative;
+}
+
+.search-email-footer {
+    border: none;
+    outline: none;
+    appearance: none;
+    width: 353px;
+    height: 44px;
+    vertical-align: middle;
+    border-radius: 50px 0 0 50px;
+    z-index: 1;
+    font-family: $font-f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #ffffff;
+    background: url(../img/bcg-email-search.png);
+    padding: 0 0 0 30px;
+}
+
+.submit-email-footer {
+    width: 140px;
+    height: 44px;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    right: 25px;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    font-family: $font-f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffffff;
+    &:hover {
+        background: linear-gradient(94.78deg, #863d38 11.19%, #a11ba3 93.72%);
+    }
+}
+
+.socials-icons-footer {
+    margin: 40px 0 50px 0;
+    display: flex;
+}
+
+.icon-footer {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50px;
+    margin: 0 30px 0 0;
+    position: relative;
+    &:hover {
+        background: linear-gradient(94.26deg, #9f74d1 9.51%, #626dd1 90.23%);
+    }
+    &:hover svg {
+        fill: black;
+    }
+    svg {
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        left: 13px;
+        fill: #ffffff;
+    }
+}
+
+.aside-footer {
+    @include txt-section();
+}
